@@ -1,0 +1,14 @@
+patients={"Shem": (96,120,105),
+          "Ana": (70,180,100),
+          "Digs": (90,180,176),
+          "Dean": (120,130,140)}
+
+normal=120
+for key,value in patients.items():
+    print(key)
+    for v in value:
+            if v>normal:
+                print(v, "Diabetic")
+            else:
+                print(v, "Normal")
+ 
