@@ -1,0 +1,5 @@
+student = {
+    "name": "Ras",
+    "age": 18,
+    "course": "Computer Science"
+}
