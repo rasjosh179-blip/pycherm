@@ -1,0 +1,3 @@
+names = ["Ras", "John", "Mark"]
+
+print(names)
