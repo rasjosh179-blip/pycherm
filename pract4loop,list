@@ -1,0 +1,24 @@
+students = []
+
+for i in range(3):
+    print(f"\nStudent {i + 1}")
+
+    name = input("Name: ")
+    age = int(input("Age: "))
+    course = input("Course: ")
+
+    student = {
+        "name": name,
+        "age": age,
+        "course": course
+    }
+
+    students.append(student)
+
+print("\n=== STUDENT LIST ===")
+
+for student in students:
+    print("Name:", student["name"])
+    print("Age:", student["age"])
+    print("Course:", student["course"])
+    print()
