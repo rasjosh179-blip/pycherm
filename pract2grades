@@ -1,0 +1,31 @@
+students = {
+    "Shem": 89,
+    "Digs": 90,
+    "Tana": 99,
+    "Dean": 78,
+}
+print("STUDENT GRADES")
+print("================")
+print("Shem:" , students ["Shem"] )
+print("Digs:" , students ["Digs"] )
+# add new student
+students["Ras"] = 88
+
+students["Tana"] = 99
+students["Dean"] = 91
+name1 = input("Enter student name:()").lower()
+grade1 = int(input("Enter student grade:()"))
+students[name1] = grade1
+print(students)
+print("\nUpdate Student Grades: ")
+print("==========================")
+for name, grade in students.items():
+    print(name, ":", grade)
+search = input("\nEnter student name to search: ")
+if search in students:
+    print(search, "has grade of", students[search])
+else:
+    print("Student not found.")
+highest = max(students, key=students.get)
+print(highest)
+ 
