@@ -1,0 +1,74 @@
+Code for PIzza Program
+Practice
+
+
+
+
+# Robert Josh H. Ras
+#  CSD101
+# SEPTEMBER, 21 2026
+
+# Pizza Ordering Program
+
+orders = []
+
+while True:
+    print("\n===== PIZZA ORDER =====")
+
+    flavor = input("Enter pizza flavor: ")
+    size = input("Enter pizza size (Small/Medium/Large): ")
+    quantity = int(input("Enter quantity: "))
+
+    # Set price based on size
+    if size.lower() == "small":
+        price = 150
+    elif size.lower() == "medium":
+        price = 200
+    elif size.lower() == "large":
+        price = 250
+    else:
+        print("Invalid size!")
+        continue
+
+    # Calculate total
+    subtotal = price * quantity
+
+    # Display the order
+    print("\n===== YOUR ORDER =====")
+    print("Flavor   :", flavor)
+    print("Size     :", size)
+    print("Quantity :", quantity)
+    print("Price    : ₱", price)
+    print("Subtotal : ₱", subtotal)
+
+    # Save order
+    orders.append([flavor, size, quantity, price, subtotal])
+
+    # Ask to order again
+    again = input("\nOrder again? (yes/no): ")
+
+    if again.lower() != "yes":
+        break
+
+# Print final receipt
+print("\n================================")
+print("          PIZZA RECEIPT")
+print("================================")
+
+total = 0
+
+for order in orders:
+    print("Flavor   :", order[0])
+    print("Size     :", order[1])
+    print("Quantity :", order[2])
+    print("Price    : ₱", order[3])
+    print("Subtotal : ₱", order[4])
+    print("--------------------------------")
+
+    total += order[4]
+
+print("TOTAL    : ₱", total)
+print("================================")
+print("       Thank you for ordering!")
+print("================================")
+ 
